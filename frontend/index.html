@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Placement Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Placement Management System</h1>
+        <p>Manage students, companies and placement applications</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#students">Students</a>
+        <a href="#companies">Companies</a>
+        <a href="#applications">Applications</a>
+    </nav>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p id="studentCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Companies</h3>
+                    <p id="companyCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Applications</h3>
+                    <p id="applicationCount">0</p>
+                </div>
+            </div>
+        </section>
+
+       
+<section id="students">
+    <h2>Student Management</h2>
+
+    <form id="studentForm">
+        <input type="hidden" id="studentId">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <input type="text" id="branch" placeholder="Branch (e.g. IT)" required>
+
+        <input type="number" id="cgpa" placeholder="CGPA" min="0" max="10" step="0.01" required>
+
+        <button type="submit" id="submitBtn">Add Student</button>
+    </form>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <p id="studentMessage"></p>
+</section>
+
+       
+<section id="companies">
+    <h2>Company Management</h2>
+
+    <form id="companyForm">
+        <input type="hidden" id="companyId">
+
+        <input
+            type="text"
+            id="companyName"
+            placeholder="Company Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="companyRole"
+            placeholder="Job Role"
+            required
+        >
+
+        <input
+            type="number"
+            id="companyPackage"
+            placeholder="Package (LPA)"
+            min="0"
+            step="0.01"
+        >
+
+        <input
+            type="text"
+            id="companyLocation"
+            placeholder="Location"
+        >
+
+        <button type="submit" id="companySubmitBtn">
+            Add Company
+        </button>
+    </form>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Package (LPA)</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="companyTableBody"></tbody>
+        </table>
+    </div>
+
+    <p id="companyMessage"></p>
+</section>
+
+<section id="applications">
+    <h2>Placement Applications</h2>
+
+    <form id="applicationForm">
+        <select id="applicationStudent" required>
+            <option value="">Select Student</option>
+        </select>
+
+        <select id="applicationCompany" required>
+            <option value="">Select Company</option>
+        </select>
+
+        <button type="submit">Add Application</button>
+    </form>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Applied At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="applicationTableBody"></tbody>
+        </table>
+    </div>
+
+    <p id="applicationMessage"></p>
+</section>
+    </main>
+
+    <footer>
+        <p>Student Placement Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

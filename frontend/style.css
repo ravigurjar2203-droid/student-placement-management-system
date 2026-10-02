@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+header {
+    background: #173b70;
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: #173b70;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+#students,
+#companies,
+#applications {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+footer {
+    background: #173b70;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 650px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 18px;
+    }
+}
+
+#studentForm {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#studentForm input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    min-width: 0;
+}
+
+button {
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #173b70;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+
+th, td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: #eef3fa;
+}
+
+.edit-btn {
+    background: #15803d;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+#studentMessage {
+    margin-top: 15px;
+}
+
+@media (max-width: 650px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+}
+
+#companyForm,
+#applicationForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#companyForm input,
+#applicationForm select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#companyForm button,
+#applicationForm button {
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#companyForm button:hover,
+#applicationForm button:hover {
+    background: #1d4ed8;
+}
+
+#companyMessage,
+#applicationMessage {
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
