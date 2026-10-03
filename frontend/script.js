@@ -1,5 +1,5 @@
 
-const API = "http://localhost:3000/api";
+const API = "https://placement-system-api-v1.onrender.com/api";
 
 let students = [];
 let companies = [];
