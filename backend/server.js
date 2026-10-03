@@ -38,10 +38,12 @@ app.get("/api/students", async (req, res) => {
             "SELECT * FROM students ORDER BY id DESC"
         );
         res.json(students);
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).json({ message: "Failed to fetch students." });
-    }
+    } catch (err) {
+  console.error("Fetch students error:", err);
+  res.status(500).json({
+    message: "Failed to fetch students."
+  });
+}
 });
 
 // Add a student
